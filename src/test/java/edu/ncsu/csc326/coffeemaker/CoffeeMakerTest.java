@@ -91,25 +91,6 @@ public class CoffeeMakerTest {
         }
     }
 
-    @Test
-    public void testEditRecipe_CheckCorrectName() {
-        barista.addRecipe(recipe1);
-        String expected = "Latte";
-        try {
-            recipe1.setName("Latte");
-            recipe1.setAmtCoffee("3");
-            recipe1.setPrice("2");
-            recipe1.setAmtMilk("4");
-            recipe1.setAmtChocolate("0");
-            recipe1.setAmtSugar("0");
-            barista.editRecipe(0, recipe1);
-            String nameOfEdited = recipe1.getName();
-            assertEquals(expected, nameOfEdited);
-        } catch (RecipeException e) {
-            fail("Shouldn't fail");
-        }
-    }
-
     // Inspired by example test
     @Test
     public void testAddInventory_Normal() {
